@@ -1,0 +1,93 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+:root {
+    --bg-neutral: #7336a6;
+    --bg-btn: #f1d713;
+    --bg-correct: #36a63f;
+    --bg-wrong: #a63636;
+}
+
+body {
+    --bg: var(--bg-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg);
+}
+
+body.correct {
+    --bg: var(--bg-correct);
+}
+
+body.wrong {
+    --bg: var(--bg-wrong);
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 3px;
+}
+
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 10px;
+}
+
+.btn {
+    --bg: var(--bg-btn);
+    border: 3px solid;
+    border-radius: 10px;
+    border-color: aliceblue;
+    padding: 10px;
+    background-color: var(--bg);
+}
+
+.btn:hover {
+    border-color: black;
+}
+
+.btn.correct {
+    --bg: var(--bg-correct);
+}
+
+.btn.wrong {
+    --bg: var(--bg-wrong);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-btn, .next-btn {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.hide {
+    display: none;
+}
